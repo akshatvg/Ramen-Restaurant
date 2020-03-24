@@ -7,8 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Ramen Restaurant website for internship task 2 for Fame Technologies.">
-    <meta name="keywords" content="Ramen Restaurant, Fame Technologies, Internship Task, Akshat Gupta, JSON">
+    <meta name="description" content="Top Ramen website for internship task 2 for Fame Technologies.">
+    <meta name="keywords" content="Top Ramen, Fame Technologies, Internship Task, Akshat Gupta, JSON">
     <meta name="author" content="Akshat Gupta">
     <meta name="copyright" content="Akshat Gupta">
     <meta name="language" content="en">
@@ -23,50 +23,209 @@
     <meta name="og:site_name" content="Akshat Gupta">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Akshat Gupta">
-    <meta property="og:description" content="Ramen Restaurant website for internship task 2 for Fame Technologies.">
+    <meta property="og:description" content="Top Ramen website for internship task 2 for Fame Technologies.">
     <meta property="og:url" content="https://ramen.akshatvg.com">
-    <meta property="og:site_name" content="Ramen Restaurant">
+    <meta property="og:site_name" content="Top Ramen">
     <meta name="twitter:card" content="website">
-    <meta name="twitter:site" content="Ramen Restaurant">
+    <meta name="twitter:site" content="Top Ramen">
     <meta name="twitter:title" content="Akshat Gupta">
-    <meta name="twitter:description" content="Ramen Restaurant website for internship task 2 for Fame Technologies.">
+    <meta name="twitter:description" content="Top Ramen website for internship task 2 for Fame Technologies.">
     <meta name="twitter:creator" content="@akshatvg">
-    <meta itemprop="name" content="Ramen Restaurant">
-    <meta itemprop="description" content="Ramen Restaurant website for internship task 2 for Fame Technologies.">
+    <meta itemprop="name" content="Top Ramen">
+    <meta itemprop="description" content="Top Ramen website for internship task 2 for Fame Technologies.">
     <link rel="canonical" href="https://ramen.akshatvg.com">
 
-
     <!-- Title -->
-    <title>Home || Ramen Restaurant</title>
+    <title>Home || Top Ramen</title>
 
-    <!-- Linking Favicon, Apple Touch Icon, Bootstrap & CSS -->
+    <!-- Linking Favicon, Apple Touch Icon, Fonts, Bootstrap, CSS, Font Awesome -->
     <link rel="icon" href="assets/img/favicon.jpg">
     <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.jpg">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/index.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/aos.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
 </head>
 
 <body>
 
-    <!-- Preloader -->
-    <!-- <div id="preloader"></div> -->
+    <!-- Navbar -->
+    <header role="banner">
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">Top Ramen</a>
+                <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse"
+                    data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarsExample05">
+                    <ul class="navbar-nav ml-auto pl-lg-5 pl-0">
+                        <li class="nav-item ml-auto">
+                            <a class="nav-link active" href="index.html"><b>Home</b></a>
+                        </li>
+                        <li class="nav-item ml-auto">
+                            <a class="nav-link" href="#varieties">Varieties</a>
+                        </li>
+                        <li class="nav-item ml-auto">
+                            <a class="nav-link" href="#pics">Popular Pictures</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Carousel -->
+    <div class="slider-wrap">
+        <section class="home-slider owl-carousel">
+            <div class="slider-item" style="background-image: url('assets/img/hero_1.jpg');">
+                <div class="container">
+                    <div class="row slider-text align-items-center justify-content-center">
+                    </div>
+                </div>
+            </div>
+            <div class="slider-item" style="background-image: url('assets/img/hero_2.jpg');">
+                <div class="container">
+                    <div class="row slider-text align-items-center justify-content-center">
+                    </div>
+                </div>
+        </section>
+    </div>
+
+    <!-- <table id="table">
+        <tr>
+            <th>Brand</th>
+            <th>Variety</th>
+            <th>Style</th>
+            <th>Country</th>
+            <th>Stars</th>
+            <th>Top Ten</th>
+        </tr>
+    </table>
+    <div id="myData"></div>
+    </div>
+    <script>
+        fetch('test.json')
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (data) {
+                appendData(data);
+            })
+            .catch(function (err) {
+                console.log('error: ' + err);
+            });
+
+        function appendData(data) {
+            var mainContainer = document.getElementById("myData");
+            for (var i = 0; i < data.length; i++) {
+                var div = document.createElement("div");
+                div.innerHTML = '<tr><td>' + data[i].Brand + '</td><td>' + data[i].Variety + '</td><td>' + data[i].Style + '</td><td>' + data[i].Country + '</td><td>' + data[i].Stars + '</td><td>' + data[i].TopTen + '</td></tr>';
+                mainContainer.appendChild(div);
+            }
+        }
+    </script> -->
+
+    <!-- Varieties -->
+    <section class="section bg-light py-5  bottom-slant-gray" id="varieties">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mb-4 mb-lg-0 col-lg-3 text-left service-block" data-aos="fade-up"
+                    data-aos-delay="">
+                    <img src="assets/img/ramen.png" style="width: 90px;border-radius: 50px;border: 3px solid #FF7403;"
+                        class="mb-3 p-1" />
+                    <h3 class="mb-2 text-primary">Chicken Ramen</h3>
+                    <p>World famous!</p>
+                </div>
+                <div class="col-md-6 mb-4 mb-lg-0 col-lg-3 text-left service-block" data-aos="fade-up"
+                    data-aos-delay="100">
+                    <img src="assets/img/ramen1.png" style="width: 90px;border-radius: 50px;border: 3px solid #FF7403;"
+                        class="mb-3 p-1" />
+                    <h3 class="mb-2 text-primary">Chilli Vegetarian Ramen</h3>
+                    <p>Cheap and tasty!</p>
+                </div>
+                <div class="col-md-6 mb-4 mb-lg-0 col-lg-3 text-left service-block" data-aos="fade-up"
+                    data-aos-delay="200">
+                    <img src="assets/img/pasta.png" style="width: 90px;border-radius: 50px;border: 3px solid #FF7403;"
+                        class="mb-3 p-1" />
+                    <h3 class="mb-2 text-primary">Hot & Spicy Beef Ramen</h3>
+                    <p>Kitchen's favourite!</p>
+                </div>
+                <div class="col-md-6 mb-4 mb-lg-0 col-lg-3 text-left service-block" data-aos="fade-up"
+                    data-aos-delay="300">
+                    <img src="assets/img/pasta1.png" style="width: 90px;border-radius: 50px;border: 3px solid #FF7403;"
+                        class="mb-3 p-1" />
+                    <h3 class="mb-2 text-primary">Shrimp Ramen</h3>
+                    <p>Today's trending!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Pictures -->
+    <section class="section pb-0" id="pics">
+        <div class="container">
+            <div class="row mb-5 justify-content-center" data-aos="fade">
+                <div class="col-md-7 text-center heading-wrap">
+                    <h2 data-aos="fade-up">Popular Pictures</h2>
+                    <p data-aos="fade-up" data-aos-delay="100">See what happy users shared with us!</p>
+                </div>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-lg-4">
+                    <img src="assets/img/photo1.jpg" alt="Photo 1" class="img-fluid about_img_1" data-aos="fade"
+                        data-aos-delay="200">
+                </div>
+                <div class="col-lg-4">
+                    <img src="assets/img/photo2.jpg" alt="Photo 2" class="img-fluid about_img_1" data-aos="fade"
+                        data-aos-delay="300">
+                    <img src="assets/img/photo3.jpg" alt="Photo 3" class="img-fluid about_img_1" data-aos="fade"
+                        data-aos-delay="400">
+                </div>
+                <div class="col-lg-4">
+                    <img src="assets/img/photo4.jpg" alt="Photo 4" class="img-fluid about_img_1" data-aos="fade"
+                        data-aos-delay="500">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="p-3 bg-light" role="credits">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p>
+                        Made with &hearts; by <a href="https://akshatvg.com" target="_blank">Akshat Gupta</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Loader -->
+    <div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+            <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+            <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+                stroke="#cf1d16" /></svg></div>
 
     <!-- Scripts -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-        crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="assets/js/index.js"></script>
+    <script src="assets/js/jquery-3.2.1.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/jquery.waypoints.min.js"></script>
+    <script src="assets/js/aos.js"></script>
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="assets/js/magnific-popup-options.js"></script>
+    <script src="assets/js/main.js"></script>
+
 </body>
 
 </html>
