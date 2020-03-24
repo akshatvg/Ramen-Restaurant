@@ -225,8 +225,4 @@
    };
    contentWayPoint();
 
-   $(document).ready(function () {
-     $('#table').DataTable();
-   });
-
  })(jQuery);

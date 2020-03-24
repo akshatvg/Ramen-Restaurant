@@ -238,27 +238,24 @@
     <script src="assets/js/magnific-popup-options.js"></script>
     <script src="//cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
     <script src="assets/js/main.js"></script>
-    <!-- <script>
-        fetch('test.json')
-            .then(function (response) {
-                return response.json();
-            })
-            .then(function (data) {
-                appendData(data);
-            })
-            .catch(function (err) {
-                console.log('error: ' + err);
+    <script>
+        $(document).ready(function () {
+            $('#table').DataTable({
+                "ajax": {
+                    "url": "test.json",
+                    "dataSrc": ""
+                },
+                columns: [
+                    { "data": "Brand" },
+                    { "data": "Variety" },
+                    { "data": "Style" },
+                    { "data": "Country" },
+                    { "data": "Stars" },
+                    { "data": "TopTen" }
+                ]
             });
-
-        function appendData(data) {
-            var mainContainer = document.getElementById("myData");
-            for (var i = 0; i < data.length; i++) {
-                var div = document.createElement("div");
-                div.innerHTML = '<tr><td>' + data[i].Brand + '</td><td>' + data[i].Variety + '</td><td>' + data[i].Style + '</td><td>' + data[i].Country + '</td><td>' + data[i].Stars + '</td><td>' + data[i].TopTen + '</td></tr>';
-                mainContainer.appendChild(div);
-            }
-        }
-    </script> -->
+        });
+    </script>
 
 </body>
 
