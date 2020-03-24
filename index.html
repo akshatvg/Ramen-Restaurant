@@ -48,6 +48,7 @@
     <link rel="stylesheet" href="assets/css/aos.css">
     <link rel="stylesheet" href="assets/css/magnific-popup.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
 
 </head>
@@ -56,7 +57,7 @@
 
     <!-- Navbar -->
     <header role="banner">
-        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark navbar-fixed-top">
             <div class="container">
                 <a class="navbar-brand" href="index.html">Top Ramen</a>
                 <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse"
@@ -87,77 +88,88 @@
             <div class="slider-item" style="background-image: url('assets/img/hero_1.jpg');">
                 <div class="container">
                     <div class="row slider-text align-items-center justify-content-center">
+                        <div class="col-md-8 text-center col-sm-12 ">
+                            <h1 data-aos="fade-up" class="aos-init aos-animate">Find The Best Ramen Here</h1>
+                            <p class="mb-5 aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">Top Ramen
+                                brands with different varities, ratings and popular photos.</p>
+                            <p data-aos="fade-up" data-aos-delay="200" class="aos-init aos-animate"><a href="#varieties"
+                                    class="btn btn-white btn-outline-white">See All Varieties</a></p>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="slider-item" style="background-image: url('assets/img/hero_2.jpg');">
                 <div class="container">
                     <div class="row slider-text align-items-center justify-content-center">
+                        <div class="col-md-8 text-center col-sm-12 ">
+                            <h1 data-aos="fade-up" class="aos-init aos-animate">Find The Best Ramen Here</h1>
+                            <p class="mb-5 aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">Top Ramen
+                                brands with different varities, ratings and popular photos.</p>
+                            <p data-aos="fade-up" data-aos-delay="200" class="aos-init aos-animate"><a href="#varieties"
+                                    class="btn btn-white btn-outline-white">See All Varieties</a></p>
+                        </div>
                     </div>
                 </div>
         </section>
     </div>
 
-    <!-- <table id="table">
-        <tr>
-            <th>Brand</th>
-            <th>Variety</th>
-            <th>Style</th>
-            <th>Country</th>
-            <th>Stars</th>
-            <th>Top Ten</th>
-        </tr>
-    </table>
-    <div id="myData"></div>
-    </div>
-    <script>
-        fetch('test.json')
-            .then(function (response) {
-                return response.json();
-            })
-            .then(function (data) {
-                appendData(data);
-            })
-            .catch(function (err) {
-                console.log('error: ' + err);
-            });
-
-        function appendData(data) {
-            var mainContainer = document.getElementById("myData");
-            for (var i = 0; i < data.length; i++) {
-                var div = document.createElement("div");
-                div.innerHTML = '<tr><td>' + data[i].Brand + '</td><td>' + data[i].Variety + '</td><td>' + data[i].Style + '</td><td>' + data[i].Country + '</td><td>' + data[i].Stars + '</td><td>' + data[i].TopTen + '</td></tr>';
-                mainContainer.appendChild(div);
-            }
-        }
-    </script> -->
+    <section class="section bg-light py-5" id="varieties">
+        <div class="container">
+            <div class="row mb-5 justify-content-center" data-aos="fade">
+                <div class="col-md-7 text-center heading-wrap">
+                    <h2 data-aos="fade-up">Ramen Details</h2>
+                </div>
+            </div>
+            <div class="table-responsive">
+                <table class="table table-hover" id="table">
+                    <thead>
+                        <tr>
+                            <th>Brand</th>
+                            <th>Variety</th>
+                            <th>Style</th>
+                            <th>Country</th>
+                            <th>Stars</th>
+                            <th>Top Ten</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
 
     <!-- Varieties -->
-    <section class="section bg-light py-5  bottom-slant-gray" id="varieties">
+    <section class="section py-5" id="varieties">
         <div class="container">
+            <div class="row mb-5 justify-content-center" data-aos="fade">
+                <div class="col-md-7 text-center heading-wrap">
+                    <h2 data-aos="fade-up">Ramen Varieties</h2>
+                </div>
+            </div>
             <div class="row">
-                <div class="col-md-6 mb-4 mb-lg-0 col-lg-3 text-left service-block" data-aos="fade-up"
+                <div class="col-md-6 mb-4 mb-lg-0 col-lg-3 text-center service-block" data-aos="fade-up"
                     data-aos-delay="">
                     <img src="assets/img/ramen.png" style="width: 90px;border-radius: 50px;border: 3px solid #FF7403;"
                         class="mb-3 p-1" />
                     <h3 class="mb-2 text-primary">Chicken Ramen</h3>
                     <p>World famous!</p>
                 </div>
-                <div class="col-md-6 mb-4 mb-lg-0 col-lg-3 text-left service-block" data-aos="fade-up"
+                <div class="col-md-6 mb-4 mb-lg-0 col-lg-3 text-center service-block" data-aos="fade-up"
                     data-aos-delay="100">
                     <img src="assets/img/ramen1.png" style="width: 90px;border-radius: 50px;border: 3px solid #FF7403;"
                         class="mb-3 p-1" />
                     <h3 class="mb-2 text-primary">Chilli Vegetarian Ramen</h3>
                     <p>Cheap and tasty!</p>
                 </div>
-                <div class="col-md-6 mb-4 mb-lg-0 col-lg-3 text-left service-block" data-aos="fade-up"
+                <div class="col-md-6 mb-4 mb-lg-0 col-lg-3 text-center service-block" data-aos="fade-up"
                     data-aos-delay="200">
                     <img src="assets/img/pasta.png" style="width: 90px;border-radius: 50px;border: 3px solid #FF7403;"
                         class="mb-3 p-1" />
                     <h3 class="mb-2 text-primary">Hot & Spicy Beef Ramen</h3>
                     <p>Kitchen's favourite!</p>
                 </div>
-                <div class="col-md-6 mb-4 mb-lg-0 col-lg-3 text-left service-block" data-aos="fade-up"
+                <div class="col-md-6 mb-4 mb-lg-0 col-lg-3 text-center service-block" data-aos="fade-up"
                     data-aos-delay="300">
                     <img src="assets/img/pasta1.png" style="width: 90px;border-radius: 50px;border: 3px solid #FF7403;"
                         class="mb-3 p-1" />
@@ -169,7 +181,7 @@
     </section>
 
     <!-- Popular Pictures -->
-    <section class="section pb-0" id="pics">
+    <section class="section bg-light py-5" id="pics">
         <div class="container">
             <div class="row mb-5 justify-content-center" data-aos="fade">
                 <div class="col-md-7 text-center heading-wrap">
@@ -197,7 +209,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="p-3 bg-light" role="credits">
+    <footer class="p-3" role="credits">
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center">
@@ -224,7 +236,29 @@
     <script src="assets/js/aos.js"></script>
     <script src="assets/js/jquery.magnific-popup.min.js"></script>
     <script src="assets/js/magnific-popup-options.js"></script>
+    <script src="//cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
     <script src="assets/js/main.js"></script>
+    <!-- <script>
+        fetch('test.json')
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (data) {
+                appendData(data);
+            })
+            .catch(function (err) {
+                console.log('error: ' + err);
+            });
+
+        function appendData(data) {
+            var mainContainer = document.getElementById("myData");
+            for (var i = 0; i < data.length; i++) {
+                var div = document.createElement("div");
+                div.innerHTML = '<tr><td>' + data[i].Brand + '</td><td>' + data[i].Variety + '</td><td>' + data[i].Style + '</td><td>' + data[i].Country + '</td><td>' + data[i].Stars + '</td><td>' + data[i].TopTen + '</td></tr>';
+                mainContainer.appendChild(div);
+            }
+        }
+    </script> -->
 
 </body>
 
